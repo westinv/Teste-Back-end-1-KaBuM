@@ -14,3 +14,17 @@ A requisição deverá ser via POST e as informações do produto deverão ser e
 <h1 align="left"> Execução </h1> 
 
 A execução é feita a partir da instalação das dependencias, sendo assim é só executar no terminal
+
+yarn ou npm
+
+Logo após a instalação a execução do codigo é feita pelo comando:
+
+yarn dev
+
+<h1 align="left"> Testes </h1> 
+
+A execução é feita a partir do comando: 
+
+yarn test
+
+
