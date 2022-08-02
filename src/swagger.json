@@ -1,0 +1,75 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Atividade Back-end KaBuM!",
+        "description": "This is an API Desafio KABUM",
+        "version": "1.0.0",
+        "contact": {
+            "email": "westin_2014v@hotmail.com"
+        }
+    },
+    "paths": {
+        "/shipping": {
+            "post": {
+                "tags": [
+                    "Shipping"
+                ],
+                "summary": "shipping inquiry",
+                "description": "Shipping calculation",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "dimensao": {
+                                        "altura": {
+                                            "type": "number"
+                                        },
+                                        "largura": {
+                                            "type": "number"
+                                        }
+                                    },
+                                    "peso": {
+                                        "type": "number"
+                                    }
+                                },
+                                "example": {
+                                    "dimensao": {
+                                        "altura": 102,
+                                        "largura": 40
+                                    },
+                                    "peso": 400
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "example": [
+                                        {
+                                            "nome": "Entrega Ninja",
+                                            "valor_frete": 12.00,
+                                            "prazo_dias": 6
+                                        },
+                                        {
+                                            "nome": "Entrega KaBuM",
+                                            "valor_frete": 8.00,
+                                            "prazo_dias": 4
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
